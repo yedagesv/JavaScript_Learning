@@ -9,3 +9,5 @@ console.log(myFrdName);
 
 myFrdName = "Sachin Bandgar";  // Variable Update
 console.log(myFrdName);
+var company=null;
+console.log(typeof company);
