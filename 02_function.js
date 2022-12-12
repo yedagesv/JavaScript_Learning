@@ -9,7 +9,7 @@ function shoeValues(value1,value2){
      value2 = temp;
     console.log("after swap ",value1,value2);
 }
-shoeValues(100,200);
+shoeValues(100,200)
 shoeValues(2,4);
 shoeValues("you","me");
 shoeValues("Kishor","HItesh");
