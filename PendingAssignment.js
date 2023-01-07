@@ -1,3 +1,119 @@
+console.log(`----------- Assignment on Date 20/12/2022  ----------`);
+
+function marrageEligibilityChekar(gender, age) {
+    if ((gender == "Male" || gender == "Female") && age >= 18) {
+        console.log(`${gender} ${age} is Eligibile for Marriage`);
+    } else if (gender == "Other" && age >= 18) {
+        console.log(`${gender} ${age} is Eligibile for Marriage`);
+    } else {
+        console.log(`${gender} ${age} is Not Eligibile for Marriage`);
+    }
+}
+marrageEligibilityChekar("Male", 17);
+marrageEligibilityChekar("Male", 25);
+marrageEligibilityChekar("Female", 28);
+marrageEligibilityChekar("Female", 16);
+marrageEligibilityChekar("Other", 35);
+marrageEligibilityChekar("Other", 41);
+
+console.log(`----------- Assignment on Switch Case  ----------`);
+
+let monthOFYear = function (month) {
+    switch (month) {
+        case 1:
+            console.log(`This month is January `);
+            console.log(`January month start the New Year`);
+            break;
+        case 2:
+            console.log(`This month is Febaury `);
+            break;
+        case 3:
+            console.log(`This month is March `);
+            break;
+        case 4:
+            console.log(`This month is April `);
+            break;
+        case 5:
+            console.log(`This month is May `);
+            break;
+        case 6:
+            console.log(`This month is June `);
+            break;
+        case 7:
+            console.log(`This month is Jully `);
+            break;
+        case 8:
+            console.log(`This month is August `);
+            break;
+        case 9:
+            console.log(`This month is September `);
+            break;
+        case 10:
+            console.log(`This month is Octomber `);
+            break;
+        case 11:
+            console.log(`This month is November `);
+            break;
+        case 12:
+            console.log(`This month is December `);
+            console.log(`This is last month of the Year`);
+            break;
+        default:
+            console.log(`This Month Is not Exit in the Calender`);
+            break;
+    }
+}
+monthOFYear(13);
+
+console.log(`-------------AssignmentDo while and while Loop ---------------`);
+// que No 1
+var index = 5;
+do {
+    console.log(index);
+    index = index + 1
+} while (index <= 15);
+
+// que No 2
+var index = 50;
+do {
+    console.log(index);
+    index = index - 1
+} while (index >= 40);
+
+// Que No 3
+var index = 1
+do {
+    console.log(index);
+    index = index + 2
+} while (index < 30);
+
+// Que No 4
+var index = 2;
+do {
+    console.log(index);
+    index = index + 2
+} while (index <= 30);
+
+// Que No 5
+var index = 5;
+do {
+    console.log(index);
+    index = index + 5
+} while (index <= 50);
+
+// Que No 6
+var index = 10;
+while (index <= 100) {
+    console.log(index);
+    index = index + 10
+}
+
+// Que No 7
+var index = 100;
+while (index >= 10) {
+    console.log(index);
+    index = index - 10
+}
 console.log(`-------------Check TCS Eligibility Criteria ---------------`);
 
 function eligibilityTCS(gradScore, hscScore, sscScore, candidateName) {
@@ -32,21 +148,17 @@ function gradeCalculation(marks) {
     } else {
         if ((marks < 35) || (marks <= 0)) {
             console.log(`${marks} sorry you are fail`);
-        }
-        if ((marks >= 90)) {
+        } else if ((marks >= 90)) {
             console.log(`Fantastic Marks:${marks} ,Your Grade is A+`);
-        }
-        if (marks >= 75 && marks < 90) {
+        } else if (marks >= 75 && marks < 90) {
             console.log(`Excellent Marks:${marks} ,Your Grade is A`);
-        }
-        if ((marks >= 50 && marks < 75)) {
+        } else if ((marks >= 50 && marks < 75)) {
             console.log(`Good Marks:${marks} ,Your Grade is B`);
-        }
-        if ((marks >= 35 && marks < 50)) {
+        } else((marks >= 35 && marks < 50)),
             console.log(`Marks:${marks} ,Your Grade is C`);
-        }
     }
 }
+
 gradeCalculation(98);
 gradeCalculation(80);
 gradeCalculation(90);
@@ -118,19 +230,19 @@ return joinArray;
 var finalResult =reversestring("Technology");
 console.log(finalResult);*/ // This method reverse only single word of given string
 
-
 function reversestring(string) {
-    var newstring = "";
-
-    for (let index = string.length - 1; index >= 8; index--) {
-        newstring += string[index];
-
+    let emptystr = "";
+    for (let index = string.length - 1; index >= 0; index--) {
+        let strchar = string.charAt(index);
+        emptystr = emptystr.concat(strchar);          // = reversestr+string.charAt(index)
+        if (strchar == " ") {
+            break;
+        }
     }
-    return newstring;
-
+    return emptystr;
 }
-let result = reversestring("Codmind Technology");
-console.log(`Reverse the string "Codemind ${result}"`);
+let result = reversestring("Codemind Technology");
+console.log(result);
 
 
 
@@ -243,4 +355,6 @@ console.log("Bank Details : ", yesBank);
 console.log("Bank Details : ", mahaBank);
 console.log("Bank Details : ", sbiBank);
 console.log("Bank Details : ", axisBank);
+let date = new Date();
 
+console.log(` The SBI Bank Opening and Closing Time is  AM IST -- ${date} PM IST`);
