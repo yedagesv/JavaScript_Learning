@@ -2,11 +2,11 @@
 console.log("=========Assignment No-2===========");
 console.log("-------------Q-1.------------------");
 var bankName;
-console.log("//// before Initialize ////");
+console.log("//// before Initialize or Declaration variable ////");
 console.log(bankName)
 
 bankName = "SBI Bank";
-console.log("//// after Initialize ////");
+console.log("//// after Initialize or to assign the value to variable ////");
 console.log(bankName);
 
 var bankNameType = typeof bankName;

@@ -14,8 +14,6 @@ console.log(myFullName);
 
 console.log("==== Learning typeof ====");
 var age = 31;
-var ageType = typeof age;
-console.log(ageType);
 console.log(typeof age);
 
 var pinCode = 431202;

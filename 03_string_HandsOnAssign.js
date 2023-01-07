@@ -9,7 +9,10 @@ var stringHandsOn = function () {
     console.log(`The No of spaces remove from string is : ${(string.length - stringtrim.length)}`);
     console.log(`Length of string after trim : ${stringtrim.length}`);
     console.log(`First and last character is : ${stringtrim.charAt(0)} and ${stringtrim.charAt(33)}`);
-    var stringword = stringtrim.split(" ");
+    var stringword = stringtrim.split(" ");     // also count no word in the string 
+    var Substringword = stringtrim.substring(0,11);
+    console.log(Substringword);
+    console.log(stringword);
     console.log(`Total word available in string is : ${stringword.length}`);
     console.log(`Index of word "good" is : ${stringtrim.indexOf("good")}`);
     console.log(`Substring and slice with start index "22" is : ${string.slice(22)}`);
