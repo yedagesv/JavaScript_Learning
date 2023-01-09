@@ -234,7 +234,7 @@ function reversestring(string) {
     let emptystr = "";
     for (let index = string.length - 1; index >= 0; index--) {
         let strchar = string.charAt(index);
-        emptystr = emptystr.concat(strchar);          // = reversestr+string.charAt(index)
+        emptystr = emptystr.concat(strchar); // = reversestr+string.charAt(index)
         if (strchar == " ") {
             break;
         }
@@ -336,6 +336,17 @@ function isPrime(number) {
     return true;
 }
 console.log(isPrime(5));
+
+
+let factorial = ((number) => {
+    let num = 1;
+    let index = number;
+    for (let index = 1; index <= number; index++) {
+        num *= (index);
+    }
+    console.log(`The value of ${index}!(Factorial) is: ${num}`);
+});
+factorial(5);
 
 
 console.log(`--------- Assignment on date 30/12/2022 ---------`);
