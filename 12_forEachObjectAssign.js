@@ -55,9 +55,7 @@ console.log(`Average salary of all the Employees : ${average}`);
 console.log(`Que No 5 -----------------------------------`);
 console.log(`The Employee which are from "HR" or "IT" Dept and There salary above 75000 are :--`);
 arrayOfEmployee.forEach((value) => {
-    if (value.emp_salary >= 75000) {
-        if ((value.emp_dept == "IT") || (value.emp_dept == "HR")) {
+        if ((value.emp_dept == "IT") || (value.emp_dept == "HR") && (value.emp_salary >= 75000)) {
             console.log(`Emp_Id: ${value.emp_id}     Name: ${value.emp_name}    Dept: ${value.emp_dept}     Salary: ${value.emp_salary}     Company: ${value.emp_company}`);
         }
-    }
 });
