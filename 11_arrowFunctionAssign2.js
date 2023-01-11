@@ -43,4 +43,4 @@ array_numbers.forEach((currentValue, index) => {
     if (index % 2 == 0) {
         console.log(`The Even position ${index } and there values in the array is: ${currentValue}`);
     }
-})
+});
