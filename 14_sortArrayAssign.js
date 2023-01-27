@@ -10,7 +10,7 @@ console.log(`[${arrayOfRollNumer}]`);
 
 console.log(`Que No 3. use sort method with custom logic and log the array----------`);
 arrayOfRollNumer.sort((num1, num2) => {
-    return num1 > num2 ? 1 : -1;
+    return num1 < num2 ? -1 : 1;
 
 });
 console.log(`[${arrayOfRollNumer}]`);
