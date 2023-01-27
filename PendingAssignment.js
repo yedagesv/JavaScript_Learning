@@ -2,11 +2,11 @@ console.log(`----------- Assignment on Date 20/12/2022  ----------`);
 
 function marrageEligibilityChekar(gender, age) {
     if ((gender == "Male" || gender == "Female") && age >= 18) {
-        console.log(`${gender} ${age} is Eligibile for Marriage`);
+        console.log(`Your are ${gender} and Your age is ${age} so, You Eligibile for Marriage`);
     } else if (gender == "Other" && age >= 18) {
-        console.log(`${gender} ${age} is Eligibile for Marriage`);
+        console.log(`Your are ${gender} and Your age is ${age} so, You Eligibile for Marriage`);
     } else {
-        console.log(`${gender} ${age} is Not Eligibile for Marriage`);
+        console.log(`Your are ${gender} and Your age is ${age} so, You NOT Eligibile for Marriage`);
     }
 }
 marrageEligibilityChekar("Male", 17);
@@ -327,15 +327,40 @@ console.log(fib(7));
 // quetion No: 5
 
 function isPrime(number) {
-    if (number <= 1) return false;
-    if (number % 2 == 0 && number > 2) return false;
+    if (number <= 1)
+        return false;
+    if (number % 2 == 0 && number > 2)
+        return false;
     const s = Math.sqrt(number);
     for (let index = 3; index <= s; index += 2) {
-        if (number % index === 0) return false;
+        if (number % index === 0)
+            return false;
     }
     return true;
 }
 console.log(isPrime(5));
+
+console.log(`Find the Prime NO in b/w 2 Nos `);
+let counter = 0;
+let count = 0;
+
+function primeNo(start, end) {
+
+    for (let j = start; j <= end; j++) {
+        for (let i = 0; i <= j; i++) {
+            if (j % i == 0) {
+                counter++
+            }
+        }
+        if (counter == 2) {
+            console.log(j);
+            count += 1;
+        }
+        counter = 0
+    }
+}
+primeNo(1, 10)
+console.log(`The total Prime NO  = ${count}`);
 
 
 let factorial = ((number) => {
